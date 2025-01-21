@@ -1,7 +1,7 @@
 # ~~~~ Printing "Hello, World!" ~~~~
 "Hello, World!" print
 
-#### Simple Arithmetic
+# ~~~~ Simple Arithmetic ~~~~
 5 3 + print
 10 2 / print
 

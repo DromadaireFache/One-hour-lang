@@ -71,8 +71,13 @@ Code for **1hr** is written in `.1hr` files. Lines starting with `#` are treated
 
 #### Simple Arithmetic
 ```1hr
-5 3 + print # Outputs: 8
-10 2 / print # Outputs: 5.0
+5 3 + print
+10 2 / print
+```
+Output:
+```
+8
+5.0
 ```
 
 #### Conditional Execution
