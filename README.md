@@ -77,7 +77,7 @@ Code for **1hr** is written in `.1hr` files. Lines starting with `#` are treated
 
 #### Conditional Execution
 ```1hr
-if 3 5 > do "This won't print" print end
+if 3 5 < do "5 is greater than 3" print end
 if 3 5 > do "This won't print" print end
 ```
 
@@ -102,7 +102,7 @@ Output:
 ```1hr
 "Enter a number: " scan int
 if 4 > do
-    "This number is greater that 4" print
+    "This number is greater than 4" print
 end
 ```
 
