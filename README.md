@@ -68,6 +68,10 @@ Code for **1hr** is written in `.1hr` files. Lines starting with `#` are treated
 ```1hr
 "Hello, World!" print
 ```
+Output:
+```
+Hello, World!
+```
 
 #### Simple Arithmetic
 ```1hr
@@ -84,6 +88,10 @@ Output:
 ```1hr
 if 3 5 < do "5 is greater than 3" print end
 if 3 5 > do "This won't print" print end
+```
+Output:
+```
+5 is greater than 3
 ```
 
 #### Loops
@@ -109,6 +117,11 @@ Output:
 if 4 > do
     "This number is greater than 4" print
 end
+```
+Output:
+```
+Enter a number: 69
+This number is greater than 4
 ```
 
 ## Running a 1hr Program
