@@ -134,7 +134,7 @@ python3 1hr.py path/to/yourFile.1hr
 
 ### Example:
 ```bash
-python3 1hr.py simpleCalculator.1hr
+python3 1hr.py calculator.1hr
 ```
 
 ---

@@ -1,0 +1,255 @@
+# This is a simple 1v1 tic tac toe game to show the features of the language
+
+"" print
+"**********************************" print
+"" print
+"Welcome to tic tac toe in 1hr-lang" print
+"" print
+"**********************************" print
+"" print
+
+# There are no arrays in this language so this is the only solution
+" " =board[0]
+" " =board[1]
+" " =board[2]
+" " =board[3]
+" " =board[4]
+" " =board[5]
+" " =board[6]
+" " =board[7]
+" " =board[8]
+
+"O" =turn
+
+# This is how you print the board
+while
+    " " board[0] + " | " + board[1] + " | " + board[2] + print
+    "-----------" print
+    " " board[3] + " | " + board[4] + " | " + board[5] + print
+    "-----------" print
+    " " board[6] + " | " + board[7] + " | " + board[8] + print
+    "" print
+
+    # Check if the game is over
+    # 1. if the board is full
+    board[0] " " !=   board[1] " " != * board[2] " " != *
+    board[3] " " != * board[4] " " != * board[5] " " != *
+    board[6] " " != * board[7] " " != * board[8] " " != *
+
+    dup =boardIsFull
+    
+    # 2. check if `X` won
+    board[0] "X" = board[1] "X" = * board[2] "X" = *
+    board[3] "X" = board[4] "X" = * board[5] "X" = * +
+    board[6] "X" = board[7] "X" = * board[8] "X" = * +
+    board[0] "X" = board[3] "X" = * board[6] "X" = * +
+    board[1] "X" = board[4] "X" = * board[7] "X" = * +
+    board[2] "X" = board[5] "X" = * board[8] "X" = * +
+    board[0] "X" = board[4] "X" = * board[8] "X" = * +
+    board[2] "X" = board[4] "X" = * board[6] "X" = * +
+    if dup do "X win" print end
+
+    # 2. check if `Y` won
+    board[0] "Y" = board[1] "Y" = * board[2] "Y" = *
+    board[3] "Y" = board[4] "Y" = * board[5] "Y" = * +
+    board[6] "Y" = board[7] "Y" = * board[8] "Y" = * +
+    board[0] "Y" = board[3] "Y" = * board[6] "Y" = * +
+    board[1] "Y" = board[4] "Y" = * board[7] "Y" = * +
+    board[2] "Y" = board[5] "Y" = * board[8] "Y" = * +
+    board[0] "Y" = board[4] "Y" = * board[8] "Y" = * +
+    board[2] "Y" = board[4] "Y" = * board[6] "Y" = * +
+    if dup do "Y win" print end +
+    if dup 0 = boardIsFull * do "draw" print end +
+
+    0 =
+do
+    # Change the player turn
+    if turn "X" = do
+        "O" =turntemp
+    end
+
+    if turn "O" = do
+        "X" =turntemp
+    end
+
+    turntemp =turn
+
+    # Ask the player for a number between 1 and 9
+    "Which square do you want to play (1-9)?: " scan int 1 - =move
+    if
+        move 0 <
+        move 8 > +
+    do
+        "Not a number within the range (1-9)!" print
+        if turn "X" = do
+            "O" =turntemp
+        end
+
+        if turn "O" = do
+            "X" =turntemp
+        end
+
+        turntemp =turn
+    end
+    
+    if move 0 = do
+        if " " board[0] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+        end
+        if " " board[0] = do
+            turn =board[0]
+        end
+    end
+
+    if move 1 = do
+        if " " board[1] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[1] = do
+            turn =board[1]
+        end
+    end
+
+    if move 2 = do
+        if " " board[2] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[2] = do
+            turn =board[2]
+        end
+    end
+
+    if move 3 = do
+        if " " board[3] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[3] = do
+            turn =board[3]
+        end
+    end
+
+    if move 4 = do
+        if " " board[4] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[4] = do
+            turn =board[4]
+        end
+    end
+
+    if move 5 = do
+        if " " board[5] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[5] = do
+            turn =board[5]
+        end
+    end
+
+    if move 6 = do
+        if " " board[6] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[6] = do
+            turn =board[6]
+        end
+    end
+
+    if move 7 = do
+        if " " board[7] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[7] = do
+            turn =board[7]
+        end
+    end
+
+    if move 8 = do
+        if " " board[8] != do
+            "Square is already occupied" print
+            if turn "X" = do
+                "O" =turntemp
+            end
+
+            if turn "O" = do
+                "X" =turntemp
+            end
+
+            turntemp =turn
+        end
+        if " " board[8] = do
+            turn =board[8]
+        end
+    end
+
+end
