@@ -2,7 +2,9 @@
 
 ## Overview
 
-**1hr** is a minimalist stack-based programming language, created as part of a one-hour coding challenge. To be clear, only the `1hr.py` and `program.1hr` files were written within the hour-long challenge and were not altered afterwards. This `README.md` file and everything in `after-hour-showcases/` was written afterwards. Inspired by Forth and Tsoding's [Porth](https://gitlab.com/tsoding/porth), this language showcases simplicity and utility, interpreted directly via Python. Programs are written in `.1hr` files, featuring essential stack manipulation and arithmetic operations.
+**1hr** is a minimalist stack-based programming language, created as part of a one-hour coding challenge. Only the `1hr.py` and `program.1hr` files were written within the hour-long challenge and were not altered afterwards. This `README.md` file and everything in `after-hour-showcases/` was written afterwards. Inspired by Forth and Tsoding's [Porth](https://gitlab.com/tsoding/porth), this language showcases simplicity and utility, interpreted directly via Python. Programs are written in `.1hr` files, featuring essential stack manipulation and arithmetic operations.
+
+**No A.I. was used to enhance nor speedup the process of coding this language!**
 
 ### Features:
 - **Stack-based design**: Operates by pushing and popping values to/from a stack.
