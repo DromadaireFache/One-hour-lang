@@ -1,0 +1,33 @@
+1 2 +
+print
+
+2 2.5 /
+print
+
+5 dup -
+print
+
+5 =a
+a print
+
+while 0 do
+    69 print
+    if 1 do
+        120 print
+    end
+end
+
+if 0 do
+    70 1 - print
+    while 1 do
+        10 print
+    end
+end
+
+"world" "hello "  swap + print
+"enter a number: " scan float 5 + print
+5 10 2dup + + + print
+1 2 3 rot print print print
+
+"thing" =msg
+msg print

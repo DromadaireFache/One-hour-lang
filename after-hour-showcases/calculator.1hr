@@ -1,0 +1,89 @@
+# I made this simple calculator after the fact to show how powerful the language is
+
+"" print
+"*************************************" print
+"" print
+"Welcome to a calculator in 1hr-lang!!" print
+"" print
+"*************************************" print
+"" print
+
+# want the user to input either `int` or `float`
+while
+    "Do you want to perform `int` or `float` calculations? " scan =mode
+    mode "int" != mode "float" != *
+do
+    "This is an invalid operation" print
+end
+
+if mode "float" = do
+    "Enter your first number: " scan float =firstNum
+    "Enter the operation you want to perform (+, -, *, /, **): " scan =op
+    "Enter your second number: " scan float =secondNum
+
+    if op "+" = do
+        firstNum secondNum + print
+    end
+
+    if op "-" = do
+        firstNum secondNum - print
+    end
+
+    if op "*" = do
+        firstNum secondNum * print
+    end
+
+    if op "/" = do
+        firstNum secondNum / print
+    end
+
+    if op "**" = do
+        firstNum secondNum ** print
+    end
+
+    if
+        op "+" !=
+        op "-" != *
+        op "*" != *
+        op "/" != *
+        op "**" != *
+    do
+        "This is an invalid operation." print
+    end
+end
+
+if mode "int" = do
+    "Enter your first number: " scan int =firstNum
+    "Enter the operation you want to perform (+, -, *, /, **): " scan =op
+    "Enter your second number: " scan int =secondNum
+
+    if op "+" = do
+        firstNum secondNum + print
+    end
+
+    if op "-" = do
+        firstNum secondNum - print
+    end
+
+    if op "*" = do
+        firstNum secondNum * print
+    end
+
+    if op "/" = do
+        firstNum secondNum / print
+    end
+
+    if op "**" = do
+        firstNum secondNum ** print
+    end
+
+    if
+        op "+" !=
+        op "-" != *
+        op "*" != *
+        op "/" != *
+        op "**" != *
+    do
+        "This is an invalid operation." print
+    end
+end

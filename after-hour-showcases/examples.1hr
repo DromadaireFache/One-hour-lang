@@ -1,0 +1,25 @@
+# ~~~~ Printing "Hello, World!" ~~~~
+"Hello, World!" print
+
+#### Simple Arithmetic
+5 3 + print
+10 2 / print
+
+# ~~~~ conditional statements ~~~~
+if 3 5 > do "This won't print" print end
+if 3 5 > do "This won't print" print end
+
+# ~~~~ Loops ~~~~
+3 =count
+while
+    count 0 >=
+do
+    count print
+    count 1 - =count
+end
+
+# ~~~~ If statements ~~~~
+"Enter a number: " scan int
+if 4 > do
+    "This number is greater that 4" print
+end
