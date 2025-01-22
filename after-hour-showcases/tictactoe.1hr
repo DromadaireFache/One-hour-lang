@@ -9,55 +9,55 @@
 "" print
 
 # There are no arrays in this language so this is the only solution
-" " =board[0]
-" " =board[1]
-" " =board[2]
-" " =board[3]
-" " =board[4]
-" " =board[5]
-" " =board[6]
-" " =board[7]
-" " =board[8]
+" " =board0
+" " =board1
+" " =board2
+" " =board3
+" " =board4
+" " =board5
+" " =board6
+" " =board7
+" " =board8
 
 "O" =turn
 
 # This is how you print the board
 while
-    " " board[0] + " | " + board[1] + " | " + board[2] + print
+    " " board0 + " | " + board1 + " | " + board2 + print
     "-----------" print
-    " " board[3] + " | " + board[4] + " | " + board[5] + print
+    " " board3 + " | " + board4 + " | " + board5 + print
     "-----------" print
-    " " board[6] + " | " + board[7] + " | " + board[8] + print
+    " " board6 + " | " + board7 + " | " + board8 + print
     "" print
 
     # Check if the game is over
     # 1. if the board is full
-    board[0] " " !=   board[1] " " != * board[2] " " != *
-    board[3] " " != * board[4] " " != * board[5] " " != *
-    board[6] " " != * board[7] " " != * board[8] " " != *
+    board0 " " !=   board1 " " != * board2 " " != *
+    board3 " " != * board4 " " != * board5 " " != *
+    board6 " " != * board7 " " != * board8 " " != *
 
     dup =boardIsFull
     
     # 2. check if `X` won
-    board[0] "X" = board[1] "X" = * board[2] "X" = *
-    board[3] "X" = board[4] "X" = * board[5] "X" = * +
-    board[6] "X" = board[7] "X" = * board[8] "X" = * +
-    board[0] "X" = board[3] "X" = * board[6] "X" = * +
-    board[1] "X" = board[4] "X" = * board[7] "X" = * +
-    board[2] "X" = board[5] "X" = * board[8] "X" = * +
-    board[0] "X" = board[4] "X" = * board[8] "X" = * +
-    board[2] "X" = board[4] "X" = * board[6] "X" = * +
+    board0 "X" = board1 "X" = * board2 "X" = *
+    board3 "X" = board4 "X" = * board5 "X" = * +
+    board6 "X" = board7 "X" = * board8 "X" = * +
+    board0 "X" = board3 "X" = * board6 "X" = * +
+    board1 "X" = board4 "X" = * board7 "X" = * +
+    board2 "X" = board5 "X" = * board8 "X" = * +
+    board0 "X" = board4 "X" = * board8 "X" = * +
+    board2 "X" = board4 "X" = * board6 "X" = * +
     if dup do "X win" print end
 
     # 2. check if `Y` won
-    board[0] "Y" = board[1] "Y" = * board[2] "Y" = *
-    board[3] "Y" = board[4] "Y" = * board[5] "Y" = * +
-    board[6] "Y" = board[7] "Y" = * board[8] "Y" = * +
-    board[0] "Y" = board[3] "Y" = * board[6] "Y" = * +
-    board[1] "Y" = board[4] "Y" = * board[7] "Y" = * +
-    board[2] "Y" = board[5] "Y" = * board[8] "Y" = * +
-    board[0] "Y" = board[4] "Y" = * board[8] "Y" = * +
-    board[2] "Y" = board[4] "Y" = * board[6] "Y" = * +
+    board0 "Y" = board1 "Y" = * board2 "Y" = *
+    board3 "Y" = board4 "Y" = * board5 "Y" = * +
+    board6 "Y" = board7 "Y" = * board8 "Y" = * +
+    board0 "Y" = board3 "Y" = * board6 "Y" = * +
+    board1 "Y" = board4 "Y" = * board7 "Y" = * +
+    board2 "Y" = board5 "Y" = * board8 "Y" = * +
+    board0 "Y" = board4 "Y" = * board8 "Y" = * +
+    board2 "Y" = board4 "Y" = * board6 "Y" = * +
     if dup do "Y win" print end +
     if dup 0 = boardIsFull * do "draw" print end +
 
@@ -93,7 +93,7 @@ do
     end
     
     if move 0 = do
-        if " " board[0] != do
+        if " " board0 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -103,13 +103,13 @@ do
                 "X" =turntemp
             end
         end
-        if " " board[0] = do
-            turn =board[0]
+        if " " board0 = do
+            turn =board0
         end
     end
 
     if move 1 = do
-        if " " board[1] != do
+        if " " board1 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -121,13 +121,13 @@ do
 
             turntemp =turn
         end
-        if " " board[1] = do
-            turn =board[1]
+        if " " board1 = do
+            turn =board1
         end
     end
 
     if move 2 = do
-        if " " board[2] != do
+        if " " board2 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -139,13 +139,13 @@ do
 
             turntemp =turn
         end
-        if " " board[2] = do
-            turn =board[2]
+        if " " board2 = do
+            turn =board2
         end
     end
 
     if move 3 = do
-        if " " board[3] != do
+        if " " board3 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -157,13 +157,13 @@ do
 
             turntemp =turn
         end
-        if " " board[3] = do
-            turn =board[3]
+        if " " board3 = do
+            turn =board3
         end
     end
 
     if move 4 = do
-        if " " board[4] != do
+        if " " board4 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -175,13 +175,13 @@ do
 
             turntemp =turn
         end
-        if " " board[4] = do
-            turn =board[4]
+        if " " board4 = do
+            turn =board4
         end
     end
 
     if move 5 = do
-        if " " board[5] != do
+        if " " board5 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -193,13 +193,13 @@ do
 
             turntemp =turn
         end
-        if " " board[5] = do
-            turn =board[5]
+        if " " board5 = do
+            turn =board5
         end
     end
 
     if move 6 = do
-        if " " board[6] != do
+        if " " board6 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -211,13 +211,13 @@ do
 
             turntemp =turn
         end
-        if " " board[6] = do
-            turn =board[6]
+        if " " board6 = do
+            turn =board6
         end
     end
 
     if move 7 = do
-        if " " board[7] != do
+        if " " board7 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -229,13 +229,13 @@ do
 
             turntemp =turn
         end
-        if " " board[7] = do
-            turn =board[7]
+        if " " board7 = do
+            turn =board7
         end
     end
 
     if move 8 = do
-        if " " board[8] != do
+        if " " board8 != do
             "Square is already occupied" print
             if turn "X" = do
                 "O" =turntemp
@@ -247,8 +247,8 @@ do
 
             turntemp =turn
         end
-        if " " board[8] = do
-            turn =board[8]
+        if " " board8 = do
+            turn =board8
         end
     end
 
