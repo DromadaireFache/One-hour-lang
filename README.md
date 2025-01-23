@@ -2,7 +2,7 @@
 
 ## Overview
 
-**1hr** is a minimalist stack-based programming language, created as part of a one-hour coding challenge. Only the `1hr.py` and `program.1hr` files were written within the hour-long challenge and were not altered afterwards. This `README.md` file and everything in `after-hour-showcases/` was written afterwards. Inspired by Forth and Tsoding's [Porth](https://gitlab.com/tsoding/porth), this language showcases simplicity and utility, interpreted directly via Python. Programs are written in `.1hr` files, featuring essential stack manipulation and arithmetic operations.
+**1hr** is a minimalist stack-based programming language, created as part of a one-hour coding challenge. Only the `1hr.py` and `program.1hr` files were written within the hour-long challenge and were not altered afterwards. This `README.md` file and everything in `after-hour-showcases/` was written afterwards. Inspired by Forth and Tsoding's [Porth](https://gitlab.com/tsoding/porth), this language showcases simplicity and utility, interpreted directly via Python. Programs are written in `.1hr` files, featuring essential stack manipulation and arithmetic operations. Check out [this](https://github.com/DromadaireFache/1hr-language-vscode-extention.git) extension that provides language support and syntax highlighting for the 1hr programming language in Visual Studio Code.
 
 **No A.I. was used to enhance nor speedup the process of coding this language!**
 
@@ -11,6 +11,7 @@
 - **Error handling**: Provides meaningful error messages for invalid operations.
 - **Interpreted**: Python acts as the interpreter.
 - **Minimalist syntax**: Focused on essential operations.
+- **Support for syntax highlighting on VSCode**: Keywords, comments, strings, types, etc.
 
 ---
 
@@ -147,6 +148,13 @@ python3 1hr.py calculator.1hr
 - `cannot convert to float` : Invalid conversion to a float.
 
 ---
+
+## Installation for syntax highlighting extension
+
+1. Open Visual Studio Code.
+2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window.
+3. Search for `1hr Language Support`.
+4. Click `Install`.
 
 ## Author
 This language was created as a fun and educational coding challenge. Enjoy experimenting with **1hr**!
