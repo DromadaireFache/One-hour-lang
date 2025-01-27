@@ -1,0 +1,44 @@
+def:obj {
+    Null =var
+    def:printVar {
+        var print
+    }
+    def:set_var {
+        =var
+    }
+} !obj
+
+obj :instance
+obj :instance2
+5 !instance.set_var
+10 !instance2.set_var
+!obj.printVar
+!instance.printVar
+!instance2.printVar
+
+# Inheritance
+def:parent {
+    Null =name
+    { =name } =set_name
+    { name print } =print_name
+} !parent
+
+def:child { !parent
+    def:set_age {
+        =age
+    }
+    def:print_age {
+        age print
+    }
+} !child
+
+child :child_instance
+child :child_instance2
+"ParentName" !child_instance.set_name
+"ChildName" !child_instance2.set_name
+30 !child_instance.set_age
+25 !child_instance2.set_age
+!child_instance.print_name
+!child_instance.print_age
+!child_instance2.print_name
+!child_instance2.print_age

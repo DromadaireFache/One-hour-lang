@@ -1,0 +1,127 @@
+1 2 +
+print
+
+2 2.5 /
+print
+
+5 dup -
+print
+
+5 =a
+a print
+
+while 0 do
+    69 print
+    if 1 do
+        120 print
+    end
+end
+
+if 0 do
+    70 1 - print
+    while 1 do
+        10 print
+    end
+end
+
+"world" "hello "  swap + print
+"enter a number: " scan float 5 + print
+5 10 2dup + + + print
+1 2 3 rot print print print
+
+"thing" =msg
+msg print
+
+# if-else
+"Enter a number: " scan int
+if dup 3 > do
+    "greater than 3" print
+else
+    if 1 > do
+        "2 or 3" print
+    else
+        "less than or equal to 1" print
+    end
+end
+
+# create a constant
+15 :const
+const print
+
+# create an array
+[ 1 2 3 [ 5 69 [ 1 ] ] ] =arr
+arr print
+
+# like arr[2]
+arr 2 420 set
+arr 2 get print
+
+# dump the array to the stack
+[ arr ... 69 ] =arr2
+arr2 print
+
+[ 69 ] :x
+x 0 [ 420 ] set x print
+
+# # create a function (constant definition)
+def:func {
+    "World!" + print
+}
+func =func2
+"Hello, " !func2
+func2 print
+
+# recursion (if time permits)
+def:rec {
+    { dup print } =duprint
+    1 -
+    if dup do
+        !duprint !rec
+    else
+        "end of recursion" print
+    end
+}
+
+5 !rec
+
+# Special:debug
+# drop Exception:throw
+# "15" Special:exit
+
+{ 1 2 3 } =a
+[ !a ] :funcArray
+[ 1 2 4 ] =stackArray
+funcArray print
+stackArray print
+funcArray stackArray >= print
+
+import!Std
+[ "The number is " 5 ] !Std.printf
+
+5.5 !Std.Math.sqrt print
+# import!after-hour-showcases.calculator
+
+"hello # world"
+print
+
+"Current time is: " time str + print
+
+-69 print
+-12 -25 25 -100 100 !Std.Math.mapRange print
+
+drop
+[ 1 2 4 ] =myarray
+myarray 5 push
+myarray print
+myarray pop print
+myarray print
+
+# Create an array of functions
+[ { "Function 1" print } { "Function 2" print } ] =functionArray
+
+# Call functions from the array
+functionArray 0 get !
+functionArray 1 get !
+
+def:tripleSum { + + print }
+1 3 5 !tripleSum

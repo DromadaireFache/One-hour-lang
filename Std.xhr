@@ -1,0 +1,40 @@
+def:printf {
+    =in
+    "" =out
+    0 =i
+    while i in len < do
+        out in i get str + =out
+        i 1 + =i
+    end
+    out print
+}
+
+def:Math {
+    def:round {
+        int float
+    }
+
+    def:sqrt {
+        0.5 **
+    }
+
+    def:mapRange { # value min max newMin newMax
+        =newMax =newMin =max =min
+        min -
+        max min - /
+        newMax newMin - *
+        newMin +
+    }
+} !Math
+
+def:Array {
+    def:fill { # length value
+        =value array =out
+        0 =i
+        while i out len < do
+            out i value set
+            i 1 + =i
+        end
+        out
+    }
+} !Array

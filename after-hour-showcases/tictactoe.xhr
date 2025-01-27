@@ -1,0 +1,91 @@
+import!Std
+
+def:board {
+    9 array =grid
+    Null =turn
+
+    def:new {
+        [ " " " " " " " " " " " " " " " " " " ] =grid
+        "X" =turn
+    }
+    def:printGrid {
+        [ " " grid 0 get " | " grid 1 get " | " grid 2 get ] !Std.printf
+        "---+---+---" print
+        [ " " grid 3 get " | " grid 4 get " | " grid 5 get ] !Std.printf
+        "---+---+---" print
+        [ " " grid 6 get " | " grid 7 get " | " grid 8 get ] !Std.printf
+        "" print
+    }
+    def:otherTurn {
+        if turn "X" = do
+            "O"
+        else
+            "X"
+        end
+    }
+    def:changeTurn {
+        !otherTurn =turn
+    }
+    def:playMove {
+        =_move
+        if grid _move get " " != do
+            0
+        else
+            grid _move turn set
+            !changeTurn
+            1
+        end
+    }
+    def:boardFull {
+        1 =return
+        0 =i
+        while i 9 < return * do
+            if grid i get " " = do
+                0 =return
+            end
+            i 1 + =i
+        end
+        return
+    }
+    def:checkWin {
+        =player
+        grid 0 get player = grid 1 get player = * grid 2 get player = *
+        grid 3 get player = grid 4 get player = * grid 5 get player = * +
+        grid 6 get player = grid 7 get player = * grid 8 get player = * +
+        grid 0 get player = grid 3 get player = * grid 6 get player = * +
+        grid 1 get player = grid 4 get player = * grid 7 get player = * +
+        grid 2 get player = grid 5 get player = * grid 8 get player = * +
+        grid 0 get player = grid 4 get player = * grid 8 get player = * +
+        grid 2 get player = grid 4 get player = * grid 6 get player = * +
+    }
+} !board
+
+"" print
+"**********************************" print
+"" print
+"Welcome to tic tac toe in 1hr-lang" print
+"" print
+"**********************************" print
+"" print
+board =game !game.new
+
+while
+    !game.printGrid
+    # TODO: check if the game is over
+    !game.boardFull
+    dup =boardIsFull
+    # if !game.boardFull dup do "Draw!" print end
+    !game.otherTurn =player player !game.checkWin
+    if dup do player " wins!" + print end
+    if dup 0 = boardIsFull * do "Draw!" print end +
+    0 =
+do
+    "Which square do you want to play (1-9)?: " scan int 1 - =move
+    if move 0 < move 8 > + do
+        "Not a number within the range (1-9)!" print
+    else
+        if move !game.playMove 0 = do
+            "Square is already occupied" print
+        end
+    end
+end
